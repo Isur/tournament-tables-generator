@@ -1,0 +1,22 @@
+{
+  "include": ["./src/**/*", "./package.json", "./ormconfig.ts"],
+  "exclude": ["node_modules"],
+  "files": ["types.d.ts"],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "ESNext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "baseUrl": "src",
+  }
+}

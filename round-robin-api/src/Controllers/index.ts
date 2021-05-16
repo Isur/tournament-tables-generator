@@ -1,0 +1,1 @@
+export { TournamentController } from "./tournament.controller";
