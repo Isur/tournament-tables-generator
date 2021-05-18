@@ -13,16 +13,19 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
       root: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
-        height: '100%',
+        width: '90%',
+        height: '90%',
       },
     listRoot: {
       width: '100%',
+      height: '90%',
+      overflow: "auto",
       maxWidth: 360,
       backgroundColor: theme.palette.background.paper,
+      marginRight: '2em'
     },
     nested: {
       paddingLeft: theme.spacing(4),

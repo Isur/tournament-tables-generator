@@ -36,7 +36,6 @@ export const removePlayerFromTournament = (options: RemovePlayer) => async (disp
 
 export const getTournaments = () => async (dispatch: Dispatch) => {
     const response = await requestJson.get('tournaments');
-    console.log(" THIS IS SOME AWESOME TEST");
     const tournaments = response.data.reduce((prev: any, curr: any) => {
         prev[curr.id] = {
             name: curr.name,

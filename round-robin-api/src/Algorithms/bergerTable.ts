@@ -37,12 +37,12 @@ class BergerClock {
         }] : [{
             white: this.top,
             black: this.center,
-        }];
+        }] 
         for(let i = 0; i < this.leftSide.length; i++) {
             pairs.push({
                 white: this.leftSide[i],
                 black: this.rightSide[i],
-            })
+            });
         }
 
         return { pairs };
@@ -61,7 +61,9 @@ class BergerClock {
         const rounds =  [];
         for(let i = 0; i < numOfRounds; i++) {
             rounds.push(this.buildPairs(i % 2 === 1));
-            this.rotate();
+            for(let j = 0; j < (numOfRounds + 1)/2;j++) {
+                this.rotate();
+            }
         }
         return { rounds };
     }

@@ -23,7 +23,7 @@ const CreateTournament: FunctionComponent = () => {
     }
     return (
         <Paper elevation={0} className={classes.paper2}>
-        <TextField value={name} onChange={(e) => setName(e.target.value)} label="Enter tournament name..."/>
+        <TextField value={name} onChange={(e) => setName(e.target.value)} label="Enter name..."/>
         {name &&
         <Button variant="outlined" color="primary" onClick={handleSave}> SAVE </Button>
         }
