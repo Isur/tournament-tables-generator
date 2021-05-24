@@ -1,0 +1,30 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "## Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --prefix {name} -c \"bgYellow.black.bold,bgBlue.bold\" --names \"client,server\" --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "install": "concurrently --prefix {name} -c \"bgYellow.black.bold,bgBlue.bold\" --names \"client,server\" --kill-others-on-fail \"npm run install:client\" \"npm run install:server\"",
+    "client": "cd ./round-robin-front && npm run start",
+    "server": "cd ./round-robin-api && npm run start",
+    "install:server": "cd ./round-robin-api && rimraf ./node_modules && npm install",
+    "install:client": "cd ./round-robin-front && rimraf ./node_modules && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isur/tournament-tables-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isur/tournament-tables-generator/issues"
+  },
+  "homepage": "https://github.com/Isur/tournament-tables-generator#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "rimraf": "^3.0.2"
+  }
+}

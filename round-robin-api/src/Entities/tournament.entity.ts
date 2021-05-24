@@ -1,6 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Player } from "./player.entity";
-import { Round } from "./round.entity";
 
 @Entity('tournaments')
 export class Tournament {
@@ -12,8 +11,4 @@ export class Tournament {
 
     @OneToMany(() => Player, players => players.tournament)
     public players: Player[];
-
-    @OneToMany(() => Round, round => round.tournament)
-    public rounds: Round[];
-
 }
